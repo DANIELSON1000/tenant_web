@@ -14,7 +14,7 @@ def load_model():
     """Load the ML model (joblib only)."""
     MODEL_FILE = os.path.join(os.path.dirname(__file__), "tenant_model.joblib")
     if not os.path.exists(MODEL_FILE):
-        st.error("❌ Model file not found. Please upload tenant_model.joblib.")
+        st.error(" Model file not found. Please upload tenant_model.joblib.")
         st.stop()
     return joblib.load(MODEL_FILE)
 
@@ -42,7 +42,7 @@ def main():
     # App title
     st.markdown(
         """
-        <h1 style="text-align:center; color:#2E86C1;">🏡 Tenant Rent Prediction System</h1>
+        <h1 style="text-align:center; color:#2E86C1;"> Tenant Rent Prediction System</h1>
         <p style="text-align:center; color:#7D3C98; font-size:18px;">
         Enter tenant & property details to predict monthly rent and manage records.
         </p>
@@ -80,7 +80,7 @@ def main():
     })
 
     # Predict button
-    if st.sidebar.button("🔮 Predict Rent"):
+    if st.sidebar.button(" Predict Rent"):
         predicted_rent = model.predict(input_data)[0]
 
         # Save to history
@@ -103,7 +103,7 @@ def main():
             st.success("Rent is reasonable: tenant likely to pay on time.")
 
     # Old predictions table with delete
-    st.subheader("📝 Old Predictions")
+    st.subheader(" Old Predictions")
     if not history_df.empty:
         st.dataframe(history_df)
         st.markdown("**Delete a row by index:**")
@@ -119,4 +119,5 @@ def main():
 # -------------------------------
 if __name__ == "__main__":
     main()
+
 
