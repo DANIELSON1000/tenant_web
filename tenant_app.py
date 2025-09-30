@@ -57,9 +57,9 @@ def main():
     Bathroom = st.sidebar.number_input("Bathrooms", min_value=1, max_value=10, value=2)
     Furnishing_Status = st.sidebar.selectbox("Furnishing Status", ["Unfurnished", "Semi-Furnished", "Furnished"])
     Tenant_Preferred = st.sidebar.selectbox("Tenant Preferred", ["Bachelors", "Family", "Bachelors/Family"])
-    City = st.sidebar.text_input("City", "Mumbai")
+    City = st.sidebar.text_input("City")
     Point_of_Contact = st.sidebar.selectbox("Point of Contact", ["Contact Owner", "Contact Agent", "Contact Builder"])
-    Area_Locality = st.sidebar.text_input("Area Locality", "Andheri West")
+    Area_Locality = st.sidebar.text_input("Area Locality"")
     Posted_On = st.sidebar.date_input("Posted On")
     Area_Type = st.sidebar.selectbox("Area Type", ["Super Area", "Carpet Area", "Built Area"])
     Floor = st.sidebar.text_input("Floor (e.g. '5 out of 10')", "5 out of 10")
@@ -119,3 +119,4 @@ def main():
 # -------------------------------
 if __name__ == "__main__":
     main()
+
